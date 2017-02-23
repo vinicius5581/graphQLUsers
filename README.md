@@ -4,7 +4,10 @@
 
 ### Run app
 
-`node server.js`
+`npm run start`
+
+### Run app dev
+`npm run dev`
 
 ### Run Json Server
 
