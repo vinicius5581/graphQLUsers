@@ -94,3 +94,34 @@ mutation {
   }
 }
 ```
+
+```
+mutation{
+  editUser(id: "40", age: 10){
+    id
+    firstName
+    age
+  }
+}
+```
+```
+mutation{
+  editUser(id: "40", firstName: "John", age: 10){
+    id
+    firstName
+    age
+  }
+}
+```
+```
+mutation{
+  editUser(id: "40", age: 10, companyId: "1"){
+    id
+    firstName
+    age
+    company{
+      name
+    }
+  }
+}
+```
