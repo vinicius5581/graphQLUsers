@@ -1,5 +1,10 @@
 # Users
 
+## heroku:
+It contains only up to the content on Very basic using static data, because I haven't figure out how to run json server on a separate port on heroku yet. If you want to see the full version, clone the project and run either `npm run start` or `npm run dev`.
+
+https://secure-cove-56926.herokuapp.com/graphql
+
 ## Commands:
 
 ### Run app
@@ -35,3 +40,35 @@ Library responsive to crawl through the data.
 
 ### lodash
 Helper functions.
+
+
+### GraphQL Queries Samples
+
+```
+{
+  company(id: "1") {
+  	name
+    users {
+      firstName
+    }
+  }
+}
+```
+
+```
+query findCompany {
+  apple: company(id: "1") {
+    ...companyDetails
+  }
+  google: company(id: "2") {
+    ...companyDetails
+  }
+}
+
+fragment companyDetails on Company {
+  name
+  users {
+    firstName
+  }
+}
+```
