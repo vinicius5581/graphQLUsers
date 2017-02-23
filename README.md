@@ -15,11 +15,11 @@
 
 #### REST Urls
 
-`localhost:3000/users`
-`localhost:3000/users/23`
-`localhost:3000/companies`
-`localhost:3000/companies/1`
-`localhost:3000/companies/1/users`
+- `localhost:3000/users`
+- `localhost:3000/users/23`
+- `localhost:3000/companies`
+- `localhost:3000/companies/1`
+- `localhost:3000/companies/1/users`
 
 
 ## npm dependencies (package.json):
