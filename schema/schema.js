@@ -5,34 +5,30 @@ const {
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
-  GraphQLSchema // Takes a RootQuery and return a GraphQL instance
+  GraphQLSchema
 } = graphql;
-
-
 
 const users = [
   { id: '23', firstName: 'Bill', age: 20 },
-  { id: '47', firstName: 'Samantha', age: 21 },
+  { id: '47', firstName: 'Samantha', age: 21 }
 ];
-
 
 const UserType = new GraphQLObjectType({
   name: 'User',
-  fields: {
+  fields: () => ({
     id: { type: GraphQLString },
-    firstName: { type: GraphQLString},
-    age: { type: GraphQLInt}
-  }
+    firstName: { type: GraphQLString },
+    age: { type: GraphQLInt }
+  })
 });
-
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
-  fields:{
+  fields: {
     user: {
       type: UserType,
       args: { id: { type: GraphQLString } },
-      resolve (parentValue, args) {
+      resolve(parentValue, args) {
         return _.find(users, { id: args.id });
       }
     }
