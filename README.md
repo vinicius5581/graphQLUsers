@@ -41,6 +41,8 @@ Library responsive to crawl through the data.
 ### lodash
 Helper functions.
 
+### Json Server
+Mock data fake REST API
 
 ### GraphQL Queries Samples
 
@@ -69,6 +71,18 @@ fragment companyDetails on Company {
   name
   users {
     firstName
+  }
+}
+```
+
+### GraphQL Mutations
+
+```
+mutation {
+  addUser(firstName: "Stephen", age: 26) {
+    id
+    firstName
+    age
   }
 }
 ```
