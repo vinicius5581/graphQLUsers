@@ -1,7 +1,17 @@
 # Users
 
+## Commands:
 
-## npm dependencies (package.json)
+### Run app
+
+`node server.js`
+
+### Run Json Server
+
+`npm run json:server`
+
+
+## npm dependencies (package.json):
 
 ### express
 Handles incoming HTTP requests and make responses to send back to the user.
